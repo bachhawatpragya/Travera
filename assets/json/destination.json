@@ -1,0 +1,72 @@
+{
+  "maldives": {
+    "title": "Maldives",
+    "currency": "Maldivian Rufiyaa (MVR)",
+    "food": "Mas Huni, Garudhiya, Fish Curry",
+    "tradition": "Islamic customs, Bodu Beru music, island hospitality",
+    "spots": [
+      "Male City",
+      "Maafushi Island",
+      "Banana Reef",
+      "Vaadhoo Beach",
+      "Ari Atoll",
+      "Addu Atoll"
+    ]
+  },
+
+  "malta": {
+    "title": "Malta",
+    "currency": "Euro (EUR)",
+    "food": "Pastizzi, Rabbit Stew, Ftira",
+    "tradition": "Catholic feasts, historic celebrations, Mediterranean culture",
+    "spots": [
+      "Mdina",
+      "Valletta",
+      "Blue Lagoon",
+      "Gozo Island",
+      "Marsaxlokk"
+    ]
+  },
+
+  "iceland": {
+    "title": "Iceland",
+    "currency": "Icelandic Króna (ISK)",
+    "food": "Skyr, Plokkfiskur, Lamb",
+    "tradition": "Saga heritage, folk festivals, geothermal bathing",
+    "spots": [
+      "Reykjavík",
+      "Blue Lagoon",
+      "Golden Circle",
+      "Jökulsárlón Glacier Lagoon",
+      "Kirkjufell"
+    ]
+  },
+
+  "andorra": {
+    "title": "Andorra",
+    "currency": "Euro (EUR)",
+    "food": "Escudella, Trinxat, Mountain cheeses",
+    "tradition": "Pyrenean mountain culture, seasonal festivals, skiing traditions",
+    "spots": [
+      "Andorra la Vella",
+      "Grandvalira",
+      "Vallnord",
+      "Sant Joan de Caselles Church"
+    ]
+  },
+
+  "indonesia": {
+    "title": "Indonesia",
+    "currency": "Indonesian Rupiah (IDR)",
+    "food": "Nasi Goreng, Satay, Rendang",
+    "tradition": "Diverse island cultures, traditional dance, batik",
+    "spots": [
+      "Bali",
+      "Jakarta",
+      "Komodo Island",
+      "Borobudur",
+      "Mount Bromo"
+    ]
+  }
+}
+

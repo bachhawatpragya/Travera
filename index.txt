@@ -1,0 +1,220 @@
+Travera - Explore Your World
+
+
+
+Travera - Explore the World
+
+
+#.......... HEADER ..........#
+
+Travera
+
+aria-label = Toggle Menu
+<ion-icon name="menu-outline"></ion-icon>
+<ion-icon name="close-outline"></ion-icon>
+
+Home
+About Us
+Tours
+Destinations
+Blog
+Contact Us
+
+Booking Now
+
+
+
+#.......... HERO ..........#
+
+alt = Vector Shape
+
+Explore Your World
+
+Trusted Travel Agency
+
+See the world differently — your next unforgettable story starts here......
+
+Explore
+Learn More
+
+alt = hero banner
+
+
+
+#.......... DESTINATION ..........#
+
+Destinations
+
+Choose Your Place
+
+alt = Malé, Maldives
+Malé
+Maldives
+
+alt = Mdina, Malta
+Mdina
+Malta
+
+alt = Kirkjufellfoss, Iceland
+Kirkjufellfoss
+Iceland
+
+alt = Pyrenees, Andorra
+Pyrenees
+Andorra
+
+alt = Jakarta, Indonesia
+Jakarta
+Indonesia
+
+
+
+#.......... POPULAR ..........#
+
+Featured Tours
+
+Most Popular Tours
+
+alt = Sunset Bali Escape
+
+7 Days
+
+From $399.00
+
+★★★★★ (120)
+
+Sunset Bali Escape: Beaches & Temples
+Bali, Indonesia
+
+alt = Alpine Adventure
+
+10 Days
+
+From $1,299.00
+
+★★★★★ (86)
+
+Alpine Adventure in the Swiss Alps
+Interlaken, Switzerland
+
+alt = Sahara Desert Safari
+
+5 Days
+
+From $699.00
+
+★★★★☆ (58)
+
+Sahara Desert Safari: Nights Under Stars
+Merzouga, Morocco
+
+
+
+#.......... ABOUT ..........#
+
+About Us
+
+We create memorable travel experiences worldwide.
+
+Travera is a boutique travel agency with over 10 years of experience designing curated trips. We focus on sustainable travel, local expertise, and flexible bookings so you can explore confidently and responsibly.
+
+
+Tour guide
+
+Curated Experiences — Hand-picked itineraries led by local experts.
+
+Friendly Pricing — Clear pricing with no hidden fees.
+
+24/7 Support — Real-time assistance before and during your trip.
+
+Booking Now
+
+alt = About banner
+
+
+
+#.......... BLOG ..........#
+
+From The Blog Post
+
+Latest News & Articles
+
+-- Post 1 --
+alt = popular-1.jpg
+04 Dec
+Author: Aisha Parker (Editor)
+08:45 AM
+Title: Secluded Shores: Hidden Beaches Worth the Journey
+Excerpt: Discover quiet coves with crystal waters and local charm.
+Read More (expands inline)
+
+-- Post 2 --
+alt = blog-2.jpg
+06 Dec
+Author: Liam Walker (Contributor)
+01:15 PM
+Title: Travel Smarter: Expert Tips for Low-Impact Adventures
+Excerpt: Practical, tested tips to reduce your footprint while enjoying richer travel experiences.
+Read More (expands inline)
+
+-- Post 3 --
+alt = blog-3.jpg
+21 Jan
+Author: Maya Singh (Writer)
+06:00 PM
+Title: Turn Weekends into Transformative City Micro‑Adventures
+Excerpt: Short trips with lasting impact — discover, connect, and return changed.
+Read More (expands inline)
+
+
+#.......... FOOTER ..........#
+
+Top destination
+
+Indonesia, Jakarta
+Maldives, Malé
+Andorra, Pyrenees
+Malta, Mdina
+Morocco, Rabat
+
+Categories
+
+Travel
+Guide (opens packing & quick guide popup)
+Fashion
+Explore
+Food & Drink
+
+Quick links
+
+About
+Contact
+Tours
+Booking
+Terms & Conditions
+
+Get a newsletter
+
+For the latest deals and tips, travel no further than your inbox
+
+placeholder = Email address
+
+Subscribe
+
+Travera
+
+© 2024 ghummakad_pragya. All Rights Reserved
+
+<ion-icon name="logo-facebook"></ion-icon>
+<ion-icon name="logo-twitter"></ion-icon>
+<ion-icon name="logo-instagram"></ion-icon>
+<ion-icon name="logo-linkedin"></ion-icon>
+<ion-icon name="logo-google"></ion-icon>
+
+
+
+#.......... GO TO TOP ..........#
+
+aria-label = Go To Top
+
+<ion-icon name="chevron-up-outline"></ion-icon>

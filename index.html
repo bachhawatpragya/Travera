@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travera - Explore the World in my traveller</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicom.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Heebo:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#top">
+        <h1 class="logo">Travera</h1>
+      </a>
+
+      <button class="nav-toggle-btn" data-nav-toggle-btn aria-label="Toggle Menu">
+        <ion-icon name="menu-outline" class="open"></ion-icon>
+        <ion-icon name="close-outline" class="close"></ion-icon>
+      </button>
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="#top" class="navbar-link">Home</a>
+          </li>
+
+          <li>
+            <a href="#about" class="navbar-link">About Us</a>
+          </li>
+
+          <li>
+            <a href="#tours" class="navbar-link">Tours</a>
+          </li>
+
+          <li>
+            <a href="#destinations" class="navbar-link">Destinations</a>
+          </li>
+
+          <li>
+            <a href="#blog" class="navbar-link">Blog</a>
+          </li>
+
+          <li>
+            <a href="#contact" class="navbar-link">Contact Us</a>
+          </li>
+
+        </ul>
+
+        <a href="#" class="btn btn-secondary">Booking Now</a>
+
+      </nav>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section id="home" class="section hero"
+        style="background-image: url('./assets/images/hero-bg-bottom.png') url('./assets/images/hero-bg-top.png')">
+        <div class="container">
+
+          <img src="./assets/images/shape-1.png" width="61" height="61" alt="Vector Shape" class="shape shape-1">
+
+          <img src="./assets/images/shape-2.png" width="56" height="74" alt="Vector Shape" class="shape shape-2">
+
+          <img src="./assets/images/shape-3.png" width="57" height="72" alt="Vector Shape" class="shape shape-3">
+
+          <div class="hero-content">
+
+            <p class="section-subtitle">Explore Your World</p>
+
+            <h2 class="hero-title">Trusted Travel Agency</h2>
+
+            <p class="hero-text">See the world differently — your next unforgettable story starts here......</p>
+
+            <div class="btn-group">
+              <a href="#destinations" class="btn btn-primary">Explore</a>
+
+              <a href="#" id="learnMoreBtn" class="btn btn-outline" aria-expanded="false">Learn More</a>
+            </div>
+
+          </div>
+
+          <div class="hero-extend" id="heroExtend" aria-hidden="true">
+            <div class="hero-extend-inner">
+              <p class="hero-extend-text">Travera connects curious travelers with authentic experiences. We combine local guides, flexible bookings, and curated itineraries so you can explore confidently. Whether you're planning a quick weekend or a long adventure, our tool helps you discover destinations, compare options, and build the trip that fits your style.</p>
+
+              <ul class="hero-extend-list">
+                <li>Personalized recommendations based on your interests</li>
+                <li>Local tips and trusted partners for safe travel</li>
+                <li>Easy trip-building tools and packing guides</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- duplicate button group shown when hero is expanded -->
+          <div class="container">
+            <div class="btn-group btn-group-extended" id="btnGroupExtended" style="display:none; margin-top:18px;">
+              <a href="#contact" class="btn btn-primary">Contact Us</a>
+              <a href="#" id="learnMoreBtnClone" class="btn btn-outline">Show Less</a>
+            </div>
+          </div>
+
+          <figure class="hero-banner">
+            <img src="./assets/images/hero-banner.png" width="686" height="812" loading="lazy" alt="hero banner"
+              class="w-100">
+          </figure>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #DESTINATION
+      -->
+
+      <section id="destinations" class="section destination">
+        <div class="container">
+
+          <p class="section-subtitle">Destinations</p>
+
+          <h2 class="h2 section-title">Choose Your Place</h2>
+
+          <ul class="destination-list">
+
+            <li class="w-50">
+              <a href="#" class="destination-card" data-place="maldives">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/destination-1.jpg" width="1140" height="1100" loading="lazy"
+                    alt="Malé, Maldives" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <p class="card-subtitle">Malé</p>
+
+                  <h3 class="h3 card-title">Maldives</h3>
+                </div>
+
+              </a>
+            </li>
+
+            <li class="w-50">
+              <a href="#" class="destination-card" data-place="malta">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/destination-2.jpg" width="1140" height="1100" loading="lazy"
+                    alt="Malta" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <p class="card-subtitle">Mdina</p>
+
+                  <h3 class="h3 card-title">Malta</h3>
+                </div>
+
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="destination-card" data-place="iceland">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/destination-3.jpg" width="1110" height="480" loading="lazy"
+                    alt="Kirkjufellfoss, Iceland" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <p class="card-subtitle">Kirkjufellfoss </p>
+
+                  <h3 class="h3 card-title">Iceland</h3>
+                </div>
+
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="destination-card" data-place="andorra">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/destination-4.jpg" width="1110" height="480" loading="lazy"
+                    alt="Andorra" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <p class="card-subtitle">Pyrenees</p>
+
+                  <h3 class="h3 card-title">Andorra</h3>
+                </div>
+
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="destination-card" data-place="indonesia">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/destination-5.jpg" width="1110" height="480" loading="lazy"
+                    alt="Jakarta, Indonesia" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <p class="card-subtitle">Jakarta</p>
+
+                  <h3 class="h3 card-title">Indonesia</h3>
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #POPULAR
+      -->
+
+      <section id="tours" class="section popular">
+        <div class="container">
+
+          <p class="section-subtitle">Featured Tours</p>
+
+          <h2 class="h2 section-title">Most Popular Tours</h2>
+
+          <ul class="popular-list">
+
+            <li>
+              <div class="popular-card">
+
+                <figure class="card-banner">
+                  <a href="#">
+                    <img src="./assets/images/popular-1.jpg" width="740" height="518" loading="lazy"
+                      alt="Kuala Lumpur, Malaysia" class="img-cover">
+                  </a>
+
+                  <span class="card-badge">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="P07D">7 Days</time>
+                  </span>
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+                    <div class="card-price">From $399.00</div>
+
+                    <div class="card-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star-outline"></ion-icon>
+
+                      <data value="120">(120)</data>
+                    </div>
+                  </div>
+
+                  <h3 class="card-title">
+                    <a href="#">Sunset Bali Escape: Beaches &amp; Temples</a>
+                  </h3>
+
+                  <address class="card-location">Bali, Indonesia</address>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="popular-card">
+
+                <figure class="card-banner">
+                  <a href="#">
+                    <img src="./assets/images/popular-2.jpg" width="740" height="518" loading="lazy"
+                      alt="Kuala Lumpur, Malaysia" class="img-cover">
+                  </a>
+
+                  <span class="card-badge">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="P10D">10 Days</time>
+                  </span>
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+                    <div class="card-price">From $1,299.00</div>
+
+                    <div class="card-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+
+                      <data value="86">(86)</data>
+                    </div>
+                  </div>
+
+                  <h3 class="card-title">
+                    <a href="#">Alpine Adventure in the Swiss Alps</a>
+                  </h3>
+
+                  <address class="card-location">Interlaken, Switzerland</address>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="popular-card">
+
+                <figure class="card-banner">
+                  <a href="#">
+                    <img src="./assets/images/popular-3.jpg" width="740" height="518" loading="lazy"
+                      alt="Kuala Lumpur, Malaysia" class="img-cover">
+                  </a>
+
+                  <span class="card-badge">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="P05D">5 Days</time>
+                  </span>
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+                    <div class="card-price">From $699.00</div>
+                    
+                    <div class="card-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star-outline"></ion-icon>
+
+                      <data value="58">(58)</data>
+                    </div>
+                  </div>
+
+                  <h3 class="card-title">
+                    <a href="#">Sahara Desert Safari: Nights Under Stars</a>
+                  </h3>
+
+                  <address class="card-location">Merzouga, Morocco</address>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section id="about" class="section about">
+        <div class="container">
+
+          <div class="about-content">
+
+            <p class="section-subtitle">About Us</p>
+
+            <h2 class="h2 section-title">We create memorable travel experiences worldwide.</h2>
+
+            <p class="about-text">
+              Travera is a boutique travel agency with over 10 years of experience designing curated trips. We focus on
+              sustainable travel, local expertise, and flexible bookings so you can explore confidently and responsibly.
+            </p>
+
+            <ul class="about-list">
+
+              <li class="about-item">
+
+                <div class="about-item-icon">
+                  <ion-icon name="compass"></ion-icon>
+                </div>
+
+                <div class="about-item-content">
+                  <h3 class="h3 about-item-title">Curated Experiences</h3>
+
+                  <p class="about-item-text">
+                    Hand-picked itineraries led by local experts to help you discover authentic moments off the beaten path.
+                  </p>
+                </div>
+
+              </li>
+
+              <li class="about-item">
+
+                <div class="about-item-icon">
+                  <ion-icon name="wallet"></ion-icon>
+                </div>
+
+                <div class="about-item-content">
+                  <h3 class="h3 about-item-title">Friendly Pricing</h3>
+
+                  <p class="about-item-text">
+                    Clear pricing with no hidden fees, flexible payment options, and real value for every traveler.
+                  </p>
+                </div>
+
+              </li>
+
+              <li class="about-item">
+
+                <div class="about-item-icon">
+                  <ion-icon name="headset"></ion-icon>
+                </div>
+
+                <div class="about-item-content">
+                  <h3 class="h3 about-item-title">24/7 Support</h3>
+
+                  <p class="about-item-text">
+                    Real-time assistance before and during your trip — we’re here to help, anytime, anywhere.
+                  </p>
+                </div>
+
+              </li>
+
+            </ul>
+
+            <a href="#" class="btn btn-primary">Book Your Trip</a>
+
+          </div>
+
+          <figure class="about-banner">
+            <img src="./assets/images/about-banner.png" width="756" height="842" loading="lazy" alt="" class="w-100">
+          </figure>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #BLOG
+      -->
+
+      <section id="blog" class="section blog">
+        <div class="container">
+
+          <p class="section-subtitle">From The Blog Post</p>
+
+          <h2 class="h2 section-title">Latest News & Articles</h2>
+
+          <ul class="blog-list">
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner">
+
+                  <a href="#">
+                    <img src="./assets/images/blog-1.jpg" width="740" height="518" loading="lazy"
+                      alt="A good traveler has no fixed plans and is not intent on arriving." class="img-cover">
+                  </a>
+
+                  <span class="card-badge">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="12-04">04 Dec</time>
+                  </span>
+
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+
+                    <div class="author-wrapper">
+                      <figure class="author-avatar">
+                        <img src="./assets/images/author-avatar.png" width="30" height="30" alt="Jony bristow">
+                      </figure>
+
+                      <div>
+                            <a href="#" class="author-name">Aisha Parker</a>
+
+                            <p class="author-title">Editor</p>
+                      </div>
+                    </div>
+
+                        <time class="publish-time" datetime="08:45">08:45 AM</time>
+
+                  </div>
+
+                  <h3 class="card-title">
+                    <a href="#">
+                      Secluded Shores: Hidden Beaches Worth the Journey
+                    </a>
+                  </h3>
+
+                  <p class="blog-excerpt">Discover quiet coves with crystal waters and local charm.</p>
+
+                  <div class="blog-more" aria-hidden="true">
+                    <p>Venture beyond busy coastlines to find sheltered coves, tide-pool ecosystems, and welcoming seaside villages. Learn how to reach these spots (by boat, short hikes, or local roads), the best seasons to visit, and respectful practices to preserve their beauty — from packing reusable gear to following local access guidelines. Travel light, plan for changing conditions, and support nearby communities to make each visit sustainable and unforgettable.</p>
+                  </div>
+
+                  <a href="#" class="btn-link read-more" aria-expanded="false">
+                    <span>Read More</span>
+
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                  </a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner">
+
+                  <a href="#">
+                    <img src="./assets/images/blog-2.jpg" width="740" height="518" loading="lazy"
+                      alt="A good traveler has no fixed plans and is not intent on arriving." class="img-cover">
+                  </a>
+
+                  <span class="card-badge">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="12-06">06 Dec</time>
+                  </span>
+
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+
+                    <div class="author-wrapper">
+                      <figure class="author-avatar">
+                        <img src="./assets/images/author-avatar.png" width="30" height="30" alt="Jony bristow">
+                      </figure>
+
+                      <div>
+                        <a href="#" class="author-name">Liam Walker</a>
+
+                        <p class="author-title">Contributor</p>
+                      </div>
+                    </div>
+
+                    <time class="publish-time" datetime="13:15">01:15 PM</time>
+
+                  </div>
+
+                  <h3 class="card-title">
+                    <a href="#">
+                      Travel Smarter: Expert Tips for Low-Impact Adventures
+                    </a>
+                  </h3>
+
+                  <p class="blog-excerpt">Practical, tested tips to reduce your footprint while enjoying richer travel experiences.</p>
+
+                  <div class="blog-more" aria-hidden="true">
+                    <p>Choose low-emission transport where possible, favor locally owned accommodations, and pack essentials that reduce single-use waste. Small decisions — like traveling slower, supporting guide-led local tours, and tipping fairly — create bigger benefits for communities and habitats. This guide also covers quick actions to prepare responsibly: downloading offline maps, checking seasonal access, and leaving no trace so these places remain vibrant for future visitors.</p>
+                  </div>
+
+                  <a href="#" class="btn-link read-more" aria-expanded="false">
+                    <span>Read More</span>
+
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                  </a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner">
+
+                  <a href="#">
+                    <img src="./assets/images/blog-3.jpg" width="740" height="518" loading="lazy"
+                      alt="A good traveler has no fixed plans and is not intent on arriving." class="img-cover">
+                  </a>
+
+                  <span class="card-badge">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="01-21">21 Jan</time>
+                  </span>
+
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+
+                    <div class="author-wrapper">
+                      <figure class="author-avatar">
+                        <img src="./assets/images/author-avatar.png" width="30" height="30" alt="Jony bristow">
+                      </figure>
+
+                      <div>
+                        <a href="#" class="author-name">Maya Singh</a>
+
+                        <p class="author-title">Writer</p>
+                      </div>
+                    </div>
+
+                    <time class="publish-time" datetime="18:00">06:00 PM</time>
+
+                  </div>
+
+                  <h3 class="card-title">
+                    <a href="#">
+                       Weekend Plans for Curious Travelers
+                    </a>
+                  </h3>
+
+                  <p class="blog-excerpt">Make the most of short trips — explore like a local, not a tourist.</p>
+
+                  <div class="blog-more" aria-hidden="true">
+                    <p>Short getaways can feel like full vacations when you slow down and focus on a theme — food, design, nature, or history. This article gives fast, practical itineraries for 48–72 hour city escapes, including where to stay for easy walking access, markets and cafés locals love, micro-tours that reveal hidden corners, and small sustainable choices that elevate the trip. Tips include timing visits to avoid crowds, batching attractions by neighborhood, and leaving room for spontaneous discoveries that make weekend trips memorable.</p>
+                  </div>
+
+                  <a href="#" class="btn-link read-more" aria-expanded="false">
+                    <span>Read More</span>
+
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                  </a>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer id="contact" class="footer" style="background-image: url('./assets/images/footer-bg.png')">
+    <div class="container">
+
+      <div class="footer-top">
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Top destination</p>
+          </li>
+
+          <li>
+            <a href="#destinations" class="footer-link">Indonesia, Jakarta</a>
+          </li>
+
+          <li>
+            <a href="#destinations" class="footer-link">Maldives, Malé</a>
+          </li>
+
+          <li>
+            <a href="#destinations" class="footer-link">Andorra, Pyrenees</a>
+          </li>
+
+          <li>
+            <a href="#destinations" class="footer-link">Malta, Mdina</a>
+          </li>
+
+          <li>
+            <a href="#destinations" class="footer-link">Morocco, Rabat</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Categories</p>
+          </li>
+
+          <li>
+            <a href="#destinations" class="footer-link">Travel</a>
+          </li>
+
+          <li>
+            <a href="javascript:void(0)" id="guideLink" class="footer-link">Guide</a>
+          </li>
+
+          <li>
+            <a href="#blog" class="footer-link">Blogs & Articles</a>
+          </li>
+
+          <li>
+            <a href="#tours" class="footer-link">Explore</a>
+          </li>
+
+          <li>
+            <a href="#destinations" class="footer-link">Rentals</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Quick links</p>
+          </li>
+
+          <li>
+            <a href="#about" class="footer-link">About</a>
+          </li>
+
+          <li>
+            <a href="#contact" class="footer-link">Contact</a>
+          </li>
+
+          <li>
+            <a href="#tours" class="footer-link">Tours</a>
+          </li>
+
+          <li>
+            <a href="#about" class="footer-link">Booking</a>
+          </li>
+
+          <li>
+            <a href="javascript:void(0)" id="termsLink" class="footer-link">Terms & Conditions</a>
+          </li>
+
+        </ul>
+
+        <div class="footer-list">
+
+          <p class="footer-list-title">Get a newsletter</p>
+
+          <p class="newsletter-text">
+            For the latest deals and tips, travel no further than your inbox
+          </p>
+
+          <form action="" class="newsletter-form">
+            <input type="email" name="email" required placeholder="Email address" class="newsletter-input">
+
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <a href="#" class="logo">Travera</a>
+
+        <p class="copyright">
+          &copy; 2024 <a href="#" class="copyright-link">ghummakad_pragya</a>. All Rights Reserved
+        </p>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-google"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <!--
+    Reusable Destination Card Template
+    ----------------------------------
+  -->
+  <div class="destination-modal" id="destinationModal" aria-hidden="true">
+  <div class="modal-content">
+
+    <button class="close-modal" id="closeModal">&times;</button>
+
+    <h2 id="modalTitle"></h2>
+
+    <p><strong>Currency:</strong> <span id="modalCurrency"></span></p>
+    <p><strong>Famous Food:</strong> <span id="modalFood"></span></p>
+    <p><strong>Traditions:</strong> <span id="modalTradition"></span></p>
+
+    <h3>Top Places to Explore</h3>
+    <ul id="modalSpots"></ul>
+
+  </div>
+</div>
+
+<!-- Terms & Conditions Modal -->
+<div class="destination-modal" id="termsModal" aria-hidden="true">
+  <div class="modal-content">
+    <button class="close-modal" id="closeTerms">&times;</button>
+
+    <h2>Terms & Conditions</h2>
+
+    <p>Welcome to Travera. By accessing or using this website you agree to the following terms and conditions. These terms govern your use of the site and outline acceptable behavior, intellectual property rights, and limitations of liability.</p>
+
+    <h3>Use of Content</h3>
+    <p>All content on this site is for informational purposes only. You may not reproduce or redistribute content without permission.</p>
+
+    <h3>Booking & Services</h3>
+    <p>Any bookings or services are subject to availability and third-party terms. Travera is not liable for services provided by external partners.</p>
+
+    <h3>Privacy</h3>
+    <p>Your use of the site is also governed by our privacy practices. Please review our privacy policy for details on data collection and use.</p>
+
+    <p style="margin-top:12px; font-size:0.95rem; color:var(--spanish-gray)">Travera Your Tour Partner :)</p>
+
+  </div>
+</div>
+
+  <!-- Packing & Quick Guide Modal -->
+  <div class="destination-modal" id="guideModal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="close-modal" id="closeGuide">&times;</button>
+
+      <h2>Packing & Quick Travel Guide</h2>
+
+      <p><strong>Weather-based essentials</strong></p>
+      <ul>
+        <li><strong>Hot climates:</strong> breathable clothing, sunhat, sunscreen, reusable water bottle.</li>
+        <li><strong>Cold climates:</strong> layered clothing, insulated jacket, gloves, warm footwear.</li>
+        <li><strong>Wet seasons:</strong> lightweight rain jacket, quick-dry clothing, waterproof bag for electronics.</li>
+      </ul>
+
+      <p><strong>General must-haves</strong></p>
+      <ul>
+        <li>Copies of important documents and a small first-aid kit.</li>
+        <li>Portable charger, universal adapter, and any required medications.</li>
+        <li>Comfortable day bag and secure wallet or money belt for busy areas.</li>
+      </ul>
+
+      <p><strong>Local awareness</strong></p>
+      <p>Check local customs and dress codes, learn a few basic phrases, and research health or entry requirements before travel. Respect protected areas and follow local guidance to minimize your footprint.</p>
+
+      <p style="margin-top:12px; font-size:0.95rem; color:var(--spanish-gray)">Quick tips: pack light, choose reusable items, and always carry copies of your documents.</p>
+
+    </div>
+  </div>
+
+
+
+
+  <!-- 
+    - #GO TO TOP
+  -->
+
+  <a href="#top" class="go-top" data-go-top aria-label="Go To Top">
+    <ion-icon name="chevron-up-outline"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

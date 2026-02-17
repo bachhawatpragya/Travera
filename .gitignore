@@ -1,0 +1,21 @@
+# Node
+node_modules/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+
+# VS Code
+.vscode/
+
+# OneDrive
+~$*
+
+# Build
+dist/
