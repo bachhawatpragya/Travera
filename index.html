@@ -74,9 +74,13 @@
             <a href="#contact" class="navbar-link">Contact Us</a>
           </li>
 
+          <li>
+            <a href="javascript:void(0)" id="myBookingsBtn" class="navbar-link">My Bookings <span id="bookingBadge" class="badge" style="display: none;">0</span></a>
+          </li>
+
         </ul>
 
-        <a href="#" class="btn btn-secondary">Booking Now</a>
+        <a href="javascript:void(0)" id="bookingBtnHeader" class="btn btn-secondary">Booking Now</a>
 
       </nav>
 
@@ -114,6 +118,8 @@
 
             <div class="btn-group">
               <a href="#destinations" class="btn btn-primary">Explore</a>
+
+              <a href="javascript:void(0)" id="quizTriggerBtn" class="btn btn-outline" style="border-color: var(--accent); color: var(--oxford-blue); background-color: rgba(144, 224, 239, 0.15);">Find Match 🎲</a>
 
               <a href="#" id="learnMoreBtn" class="btn btn-outline" aria-expanded="false">Learn More</a>
             </div>
@@ -270,9 +276,34 @@
 
           <h2 class="h2 section-title">Most Popular Tours</h2>
 
-          <ul class="popular-list">
+          <!-- Tours Search, Filter and Sort controls -->
+          <div class="tours-filter-container">
+            <div class="filter-group">
+              <ion-icon name="search-outline"></ion-icon>
+              <input type="text" id="toursSearchInput" placeholder="Search tours by name or location..." class="filter-input">
+            </div>
+            <div class="filter-group select-group">
+              <label for="toursDurationFilter">Duration:</label>
+              <select id="toursDurationFilter" class="filter-select">
+                <option value="all">All Durations</option>
+                <option value="short">Short (&lt; 7 Days)</option>
+                <option value="medium">Medium (7-9 Days)</option>
+                <option value="long">Long (10+ Days)</option>
+              </select>
+            </div>
+            <div class="filter-group select-group">
+              <label for="toursSortSelect">Sort By:</label>
+              <select id="toursSortSelect" class="filter-select">
+                <option value="default">Default</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+              </select>
+            </div>
+          </div>
 
-            <li>
+          <ul class="popular-list" id="toursList">
+
+            <li class="tour-item" data-price="399" data-duration="7" data-name="sunset bali escape beaches temples" data-location="bali indonesia" data-dest-key="indonesia">
               <div class="popular-card">
 
                 <figure class="card-banner">
@@ -310,12 +341,14 @@
 
                   <address class="card-location">Bali, Indonesia</address>
 
+                  <button type="button" class="btn btn-primary card-book-btn" style="margin-top: 15px; width: 100%; font-size: 1.4rem;" data-dest-key="indonesia">Book This Tour</button>
+
                 </div>
 
               </div>
             </li>
 
-            <li>
+            <li class="tour-item" data-price="1299" data-duration="10" data-name="alpine adventure swiss alps" data-location="interlaken switzerland" data-dest-key="switzerland">
               <div class="popular-card">
 
                 <figure class="card-banner">
@@ -353,12 +386,14 @@
 
                   <address class="card-location">Interlaken, Switzerland</address>
 
+                  <button type="button" class="btn btn-primary card-book-btn" style="margin-top: 15px; width: 100%; font-size: 1.4rem;" data-dest-key="switzerland">Book This Tour</button>
+
                 </div>
 
               </div>
             </li>
 
-            <li>
+            <li class="tour-item" data-price="699" data-duration="5" data-name="sahara desert safari nights under stars" data-location="merzouga morocco" data-dest-key="morocco">
               <div class="popular-card">
 
                 <figure class="card-banner">
@@ -395,6 +430,8 @@
                   </h3>
 
                   <address class="card-location">Merzouga, Morocco</address>
+
+                  <button type="button" class="btn btn-primary card-book-btn" style="margin-top: 15px; width: 100%; font-size: 1.4rem;" data-dest-key="morocco">Book This Tour</button>
 
                 </div>
 
@@ -819,37 +856,37 @@
         <a href="#" class="logo">Travera</a>
 
         <p class="copyright">
-          &copy; 2024 <a href="#" class="copyright-link">ghummakad_pragya</a>. All Rights Reserved
+          &copy; 2024 <a href="https://ghummakad.co" target="_blank" rel="noopener noreferrer" class="copyright-link">ghummakad.co</a>. All Rights Reserved
         </p>
 
         <ul class="social-list">
 
           <li>
-            <a href="#" class="social-link">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-link">
               <ion-icon name="logo-facebook"></ion-icon>
             </a>
           </li>
 
           <li>
-            <a href="#" class="social-link">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-link">
               <ion-icon name="logo-twitter"></ion-icon>
             </a>
           </li>
 
           <li>
-            <a href="#" class="social-link">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-link">
               <ion-icon name="logo-instagram"></ion-icon>
             </a>
           </li>
 
           <li>
-            <a href="#" class="social-link">
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link">
               <ion-icon name="logo-linkedin"></ion-icon>
             </a>
           </li>
 
           <li>
-            <a href="#" class="social-link">
+            <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="social-link">
               <ion-icon name="logo-google"></ion-icon>
             </a>
           </li>
@@ -934,8 +971,240 @@
     </div>
   </div>
 
+  <!-- Booking Modal -->
+  <div class="destination-modal" id="bookingModal" aria-hidden="true">
+    <div class="modal-content booking-modal-content">
+      <button class="close-modal" id="closeBookingBtn">&times;</button>
+      <h2>Book Your Dream Trip</h2>
+      <p class="bookings-intro">Calculate price and book your package instantly.</p>
+
+      <form id="bookingForm">
+        <div class="form-group">
+          <label for="bookingDestination">Choose Destination *</label>
+          <select id="bookingDestination" required class="form-control">
+            <option value="" disabled selected>Select a destination</option>
+            <option value="maldives">Maldives (Male Atoll) - From $499</option>
+            <option value="malta">Malta (Mdina & Valletta) - From $349</option>
+            <option value="iceland">Iceland (Geothermal & Glaciers) - From $599</option>
+            <option value="andorra">Andorra (Pyrenees Slopes) - From $299</option>
+            <option value="indonesia">Indonesia (Bali & Jakarta) - From $399</option>
+            <option value="switzerland">Switzerland (Swiss Alps) - From $1299</option>
+            <option value="morocco">Morocco (Sahara Desert) - From $699</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="bookingStartDate">Start Date *</label>
+            <input type="date" id="bookingStartDate" required class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="bookingEndDate">End Date *</label>
+            <input type="date" id="bookingEndDate" required class="form-control">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="bookingGuests">Number of Guests *</label>
+            <input type="number" id="bookingGuests" min="1" max="10" value="1" required class="form-control">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="bookingName">Lead Traveler Name *</label>
+          <input type="text" id="bookingName" required placeholder="Enter full name" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="bookingEmail">Email Address *</label>
+          <input type="email" id="bookingEmail" required placeholder="name@example.com" class="form-control">
+        </div>
+
+        <div class="booking-receipt">
+          <div class="receipt-row total-row">
+            <span>Estimated Total:</span>
+            <strong id="bookingTotalEstimate">$0.00</strong>
+          </div>
+        </div>
+
+        <div class="wizard-footer">
+          <button type="submit" class="btn btn-primary w-100">Confirm & Book Now</button>
+        </div>
+      </form>
+
+      <!-- Success View (Initially Hidden) -->
+      <div id="bookingSuccessView" style="display: none; text-align: center; padding: 20px 0;">
+        <div class="boarding-pass">
+          <div class="boarding-pass-header">
+            <h3>Booking Confirmed!</h3>
+          </div>
+          <div class="boarding-pass-body">
+            <div class="pass-flight-info">
+              <div>
+                <span class="airport-code" id="passCodeFrom">TVR</span>
+                <span class="airport-name">Travera HQ</span>
+              </div>
+              <ion-icon name="airplane" class="flight-icon"></ion-icon>
+              <div>
+                <span class="airport-code" id="passCodeTo">DEST</span>
+                <span class="airport-name" id="passDestName">-</span>
+              </div>
+            </div>
+            <div class="pass-grid">
+              <div>
+                <span class="pass-label">Traveler</span>
+                <span class="pass-value" id="passTravelerName">-</span>
+              </div>
+              <div>
+                <span class="pass-label">Reference</span>
+                <span class="pass-value" id="passRefCode">-</span>
+              </div>
+              <div>
+                <span class="pass-label">Dates</span>
+                <span class="pass-value" id="passDates">-</span>
+              </div>
+              <div>
+                <span class="pass-label">Guests</span>
+                <span class="pass-value" id="passGuestsCount">-</span>
+              </div>
+            </div>
+            <div class="pass-divider"></div>
+            <div class="pass-footer">
+              <div>
+                <span class="pass-label">Total Cost Paid</span>
+                <span class="pass-value" id="passTotalCost" style="color: var(--primary); font-size: 1.6rem;">$0.00</span>
+              </div>
+              <div class="barcode-mock"></div>
+            </div>
+          </div>
+        </div>
+        <button type="button" id="successCloseBtn" class="btn btn-outline" style="margin-top: 20px; width: 100%;">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- My Bookings Modal -->
+  <div class="destination-modal" id="myBookingsModal" aria-hidden="true">
+    <div class="modal-content my-bookings-content">
+      <button class="close-modal" id="closeMyBookingsBtn">&times;</button>
+      <h2>My Saved Bookings</h2>
+      <p class="bookings-intro">View and manage your travel itineraries.</p>
+      
+      <div id="bookingsListContainer" class="bookings-list-container">
+        <!-- Dynamic content will be injected here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Travel Match Quiz Modal -->
+  <div class="destination-modal" id="quizModal" aria-hidden="true">
+    <div class="modal-content quiz-modal-content">
+      <button class="close-modal" id="closeQuizBtn">&times;</button>
+      <h2>Find Your Perfect Destination 🎲</h2>
+      <p class="quiz-intro">Answer 3 quick choices to find where you should go next.</p>
+      
+      <div id="quizFormContainer">
+        <!-- Question 1 -->
+        <div class="quiz-question-panel active" data-q="1">
+          <h3>1. What is your dream environment?</h3>
+          <div class="quiz-options">
+            <div class="quiz-option" data-val="maldives">
+              <span class="quiz-option-emoji">🏖️</span>
+              <div>
+                <h4>Tropical Beach</h4>
+                <p>Relaxing sea waves and crystal clear lagoons.</p>
+              </div>
+            </div>
+            <div class="quiz-option" data-val="iceland">
+              <span class="quiz-option-emoji">❄️</span>
+              <div>
+                <h4>Geothermal wonders</h4>
+                <p>Waterfalls, northern lights, and thermal hot springs.</p>
+              </div>
+            </div>
+            <div class="quiz-option" data-val="switzerland">
+              <span class="quiz-option-emoji">🏔️</span>
+              <div>
+                <h4>Swiss Alps</h4>
+                <p>Snowy slopes, skiing, and clean mountain air.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="quiz-question-panel" data-q="2">
+          <h3>2. What style of travel do you prefer?</h3>
+          <div class="quiz-options">
+            <div class="quiz-option" data-val="relaxed">
+              <span class="quiz-option-emoji">🍹</span>
+              <div>
+                <h4>Slow & Relaxed</h4>
+                <p>Resorts, spas, and scenic dinners.</p>
+              </div>
+            </div>
+            <div class="quiz-option" data-val="active">
+              <span class="quiz-option-emoji">🧗</span>
+              <div>
+                <h4>Adventure & Sightseeing</h4>
+                <p>Hikes, exploring cities, and outdoor sports.</p>
+              </div>
+            </div>
+          </div>
+          <div class="quiz-footer-buttons">
+            <button type="button" class="btn btn-outline quiz-prev-btn">Back</button>
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="quiz-question-panel" data-q="3">
+          <h3>3. Who is traveling?</h3>
+          <div class="quiz-options">
+            <div class="quiz-option" data-val="solo">
+              <span class="quiz-option-emoji">🧭</span>
+              <div>
+                <h4>Solo/Couple</h4>
+                <p>Private adventure or romantic getaway.</p>
+              </div>
+            </div>
+            <div class="quiz-option" data-val="group">
+              <span class="quiz-option-emoji">👨‍👩‍👧‍👦</span>
+              <div>
+                <h4>Family/Friends</h4>
+                <p>Creating shared memories with loved ones.</p>
+              </div>
+            </div>
+          </div>
+          <div class="quiz-footer-buttons">
+            <button type="button" class="btn btn-outline quiz-prev-btn">Back</button>
+          </div>
+        </div>
+
+        <!-- Quiz Result -->
+        <div class="quiz-question-panel" id="quizResultPanel">
+          <div class="quiz-result-card">
+            <span class="result-badge">YOUR MATCH!</span>
+            <h3 id="quizResultTitle">Maldives</h3>
+            <p id="quizResultText">We recommend the Maldives! Enjoy white beaches and sunset water villas.</p>
+            <div class="quiz-result-actions">
+              <button type="button" id="quizBookBtn" class="btn btn-primary">Book This Destination</button>
+              <button type="button" id="quizRetakeBtn" class="btn btn-outline">Retake</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
+  <!-- Custom Confirm Modal -->
+  <div class="destination-modal" id="confirmCancelModal" aria-hidden="true" style="z-index: 10000;">
+    <div class="modal-content" style="max-width: 400px; text-align: center; padding: 30px;">
+      <h3 style="font-size: 1.8rem; color: var(--oxford-blue); margin-bottom: 15px;">Confirm Cancellation</h3>
+      <p style="font-size: 1.4rem; color: var(--battleship-gray); margin-bottom: 25px;">Are you sure you want to cancel this booking?</p>
+      <div style="display: flex; gap: 15px; justify-content: center;">
+        <button type="button" id="confirmCancelNo" class="btn btn-outline" style="padding: 10px 20px;">No, Keep It</button>
+        <button type="button" id="confirmCancelYes" class="btn btn-primary" style="padding: 10px 20px; background-color: #ef4444; border-color: #ef4444;">Yes, Cancel</button>
+      </div>
+    </div>
+  </div>
 
   <!-- 
     - #GO TO TOP
